@@ -1,0 +1,47 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+input[type="text"] {
+  background-color: yellow;
+}
+
+#top {
+    background-color: #ff5733;
+    margin-top: 20px;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    border-color: grey;
+    border-width: 1px;
+}
+fieldset {   
+    margin-top: 5px;
+    background-color: #ccadbe;
+}
+legend {
+    color: #1f253d;
+    background-color: #ccadbe;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #200772;
+    padding: 2px;
+    font-weight: bold;
+}
+table {
+    margin: 5px;
+    padding: 5px;
+}
+td {
+    padding: 3px;
+}
+.required {
+color: #FF0000;
+}
+
+#data > p {
+    padding-left: 10px;
+}

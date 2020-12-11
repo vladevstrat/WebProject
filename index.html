@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.red {
+  color: blueviolet;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgba(25, 0, 255, 0.541);
+}
+
+.active {
+  background-color: #225f24;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+p.red {color: red;}
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li p {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li p:hover:not(.header) {
+  background-color: #eee;
+}
+
+#demo {
+  text-align: right
+}
+</style>
+</head>
+<body>
+
+  <p id="demo" ></p>
+<ul>
+  <li><a href="\index.html" class="active">Home</a></li>
+
+  <li class="dropdown">
+
+    <a href="#">Products</a>
+
+    <div class="dropdown-content">
+
+      <a href="#">Product 1</a>
+
+      <a href="#"><p class="red">Product 2</p></a>
+
+    </div>
+
+  </li>
+
+  <li class="dropdown">
+      
+      <a href="\contact.html">Contact</a>
+
+      <div class="dropdown-content">
+
+        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/250px-Flag_of_France.svg.png" alt="Trulli" width="15">Contactez-nous</a>
+  
+        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png" alt="Trulli" width="15">Связаться с нами</a>
+  
+      </div>
+    
+  </li>
+
+  <li><a href="#news">About</a></li>
+
+</ul>
+<br></br>
+<h3>Here you can find the most popular female names.</h3>
+<br></br>
+<p>Use the search feature to check if your name is one of the most popular one!</p>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul1 id="myUL">
+  <li><p href="#">Adele</p></li>
+  <li><p href="#">Agnes</p></li>
+
+  <li><p href="#">Billy</p></li>
+  <li><p href="#">Bob</p></li>
+
+  <li><p href="#">Calvin</p></li>
+  <li><p href="#">Christina</p></li>
+  <li><p href="#">Cindy</p></li>
+</ul1>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, p, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        p = li[i].getElementsByTagName("p")[0];
+        txtValue = p.textContent || p.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1 && filter !== "") {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+window.onload.myFunction;
+</script>
+
+
+
+<script>
+  Date();
+  var date = new Date();
+  var hour = date.getHours();
+  var d = "sdfsdfsdfsdfsdfsdf";
+  if (hour<6){
+    var d = "Good morning, you must be an early bird!";
+  }
+  else if (hour >= 6 && hour < 12){
+    var d = "Good morning!"
+  }
+  else if (hour >= 12 && hour < 18){
+    var d = "Good afternoon!"
+  }
+  else if (hour >= 18 && hour < 24){
+    var d = "Good evening!"
+  }
+  document.getElementById("demo").innerHTML = d;
+  window.onload.myFunction;
+</script>
+
+</body>
+
+</html> 

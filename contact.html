@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8" />
+    <title>Contact me - Vladislav Evstratov</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="top">
+        <header>
+            <h1>Contact Us</h1>
+            <p>Plese complete tde information below. Fields marked witd <span class="required">*</span> are required
+                fields.</p>
+        </header>
+        <div id="data">
+            <fieldset>
+                <legend>Your data:</legend>
+                <form method="post" action="mailto:email@email.com">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><label for="firstName" id="firstNameLabel">First Name*: </label></td>
+                                <td><input type="text" name="firstName" id="firstName" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="lastName">Last Name*: </label></td>
+                                <td><input type="text" name="lastName" id="lastName" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="address">Address*: </label></td>
+                                <td><input type="text" name="address" id="address" required></td>
+                            <tr>
+                                <td><label for="city">City*: </label></td>
+                                <td><input type="text" name="city" id="city" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="province">Province*:</label></td>
+                                <td><select name="provincename" id="province" required>
+                                        <option value="">None</option>
+                                        <option value="alberta">Alberta</option>
+                                        <option value="britishcolumbia">British Columbia</option>
+                                        <option value="manitoba">Manitoba</option>
+                                        <option value="newbrunswick">New Brunswick</option>
+                                        <option value="newfoundlandandlabrador">Newfoundland and Labrador</option>
+                                        <option value="novascotia">Nova Scotia</option>
+                                        <option value="ontario">Ontario</option>
+                                        <option value="princeedwardisland">Prince Edward Island</option>
+                                        <option value="quebec">Quebec</option>
+                                        <option value="saskatchewan">Saskatchewan</option>
+                                        <option value="nortdwestterritories">Nortdwest Territories</option>
+                                        <option value="nunavut">Nunavut</option>
+                                        <option value="yukon">Yukon</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <td><label for="postalcode">Postal Code*: </label></td>
+                                <td><input type="text" name="postalcode" id="postalcode" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="emailaddress">Email Address*: </label></td>
+                                <td><input type="text" name="emailaddress" id="emailaddress" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="phonenumber">Phone Number*: </label></td>
+                                <td><input type="text" name="phonenumber" id="phonenumber" required></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <fieldset>
+                        <legend>Agreement: </legend>
+                        <input type="checkbox" id="agreement" required>
+                        <label for="agreement">Accept agreement.</label>
+                    </fieldset>
+                    <br>
+                    <input type="reset">
+                    <br>
+                    <br>
+                    <input type="submit" value="Send Email">
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</body>
+
+</html>
